@@ -7,7 +7,7 @@ class Square:
     Private instance attributes: size
     """
 
-    def _init_(self, size=0):
+    def __init__(self, size=0):
         """Initializes the data."""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")

@@ -7,7 +7,7 @@ class Square:
     Private instance attributes: size
     """
 
-    def _init_(self, size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initialize data."""
         self.__size = size
         self.__position = position
@@ -26,7 +26,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    def _init_(self, size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializes the data."""
         self.size = size
         self.position = position
