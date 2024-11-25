@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""__summary__
-- Write a Python script that fetches https://alu-intranet.hbtn.io/status
-- using the urllib package.
-"""
 import urllib.request
 
+# URL to fetch
+url = "https://alu-intranet.hbtn.io/status"
 
-if __name__ == '__main__':
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        content = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
-        print("\t- utf8 content: {}".format(content.decode("utf-8")))
+# Open the URL and fetch the content
+with urllib.request.urlopen(url) as response:
+    body = response.read()
+
+# Decode the response body to UTF-8 (if it's in bytes) and print it with the required format
+print(f"Body response:\n\t- {body.decode('utf-8')}")
+
