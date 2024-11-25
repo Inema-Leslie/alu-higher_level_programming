@@ -1,3 +1,3 @@
-#!/bin/bash/python3
-# display the body of a file 
-curl -sLfG "$1"
+#!/bin/bash
+# Sends a GET request to a URL, and displays the body of the response
+curl -sL "$1"
