@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 import urllib.request
 
-# URL to fetch
-url = "https://alu-intranet.hbtn.io/status"
+url = 'https://intranet.hbtn.io/status'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    '\n    AppleWebKit/537.36 (KHTML, like Gecko)'
+    '\n    Chrome/99.0.4844.84 Safari/537.36',
+}
 
-# Open the URL and fetch the content
-with urllib.request.urlopen(url) as response:
-    body = response.read()
-
-# Decode the response body to UTF-8 (if it's in bytes) and print it with the required format
-print(f"Body response:\n\t- {body.decode('utf-8')}")
-
+req = urllib.request.Request(url, headers=headers)
+with urllib.request.urlopen(req) as response:
+    content = response.read()
+    print("Body response:")
+    print("\t- type:", type(content))
+    print("\t- content:", content)
+    print("\t- utf8 content:", content.decode("utf-8"))
