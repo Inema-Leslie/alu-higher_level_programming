@@ -1,33 +1,20 @@
->>> print_square = __import__('4-print_square').print_square
+#!/usr/bin/python3
+"""A function that prints a square with the character # ."""
 
->>> print_square(4)
-####
-####
-####
-####
->>> print_square(0)
 
->>> print_square(1)
-#
->>> print_square(-1)
-Traceback (most recent call last):
-    ...
-ValueError: size must be >= 0
+def print_square(size):
+    """Print a square with the # character.
+    Args:
+        size (int): The height/width of the square.
+    Raises:
+        TypeError: If size is not an integer.
+        ValueError: If size is < 0
+    """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
 
->>> print_square("string")
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
-
->>> print_square(None)
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
-
->>> print_square(True)
-#
-
->>> print_square(-1.0)
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
+    for i in range(size):
+        [print("#", end="") for j in range(size)]
+        print("")
