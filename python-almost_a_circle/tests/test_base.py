@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Test for base.py"""
+# Test for base.py
 """
     Define unittests for 'base.py'
     Unittest classes:
