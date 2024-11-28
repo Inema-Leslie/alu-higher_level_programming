@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-"""
-    Unittest classes:
+ttest classes:
         TestSquare_instantiation
         TestSquare_size
         TestSquare_x
