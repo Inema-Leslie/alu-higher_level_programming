@@ -1,4 +1,5 @@
-ttest classes:
+ttests for models/square.py.
+    Unittest classes:
         TestSquare_instantiation
         TestSquare_size
         TestSquare_x
